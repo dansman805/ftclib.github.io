@@ -3,7 +3,7 @@ var TxtType = function(el, toRotate, period) {
   this.el = el;
   this.loopNum = 0;
   this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
+  this.txt = ' ';
   this.tick();
   this.isDeleting = false;
 };
@@ -18,7 +18,7 @@ TxtType.prototype.tick = function() {
   this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  this.el.innerHTML = '<span class="wrap">&nbsp;'+this.txt+'</span>';
 
   var that = this;
   var delta = 200 - Math.random() * 100;
